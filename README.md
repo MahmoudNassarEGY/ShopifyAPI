@@ -11,6 +11,7 @@ Type in terminal: npm install csv-writer
 
 Setting up your Shopify
 
+
 Please make sure you have some Unfulfilled orders before you run this as it pulls the unfulfilled orders
 Please replace the following portion of code by your private app Information:
                 shopName: '[Shop Name goes here]',
