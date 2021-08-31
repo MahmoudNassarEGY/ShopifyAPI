@@ -12,9 +12,9 @@ const csvWriter = createCsvWriter({
 	
 	console.log('pulling data....');
 	const shopify = new Shopify({
-								shopName: 'testci-mn',
-								apiKey: 'df826b5b76c2ac3aa580711d361336ac',
-								password: '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'
+					shopName: 'testci-mn',
+					apiKey: 'df826b5b76c2ac3aa580711d361336ac',
+					password: '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'
 							});
 	shopify.on('callLimits', (limits) => console.log(limits));
 	
@@ -31,7 +31,7 @@ const csvWriter = createCsvWriter({
 						line_items: [ { id: order.line_items[0].id } ]
 					})
 					.then( res => console.log(res) );
-					data.push({ email:              order.customer.email, 
+					data.push({ email: order.customer.email, 
 								shipping_address:   Object.values(order.shipping_address), 
 								product_title:      order.line_items[0].title, 
 								product_sku:        order.line_items[0].sku });
